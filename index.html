@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0b0d14"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-192.svg"><title>MASTER FANTASY PRO V6 FINAL</title>
+<style>
+:root{--bg:#070910;--panel:#151824;--panel2:#202432;--line:#303646;--text:#f7f8fb;--muted:#979eae;--red:#ff4b43;--green:#29d887;--yellow:#ffc84a;--blue:#55a8ff;--purple:#c13cff;--shadow:0 18px 50px rgba(0,0,0,.34)}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:radial-gradient(circle at 50% -20%,#24283a 0,#0a0c13 42%,#05070c 100%);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}button,input,select,textarea{font:inherit}header{position:sticky;top:0;z-index:50;background:rgba(7,9,16,.94);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,75,67,.55);padding:calc(12px + env(safe-area-inset-top)) 14px 12px}.wrap{max-width:1480px;margin:auto}.top{display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{font-size:20px;font-weight:950}.brand b{color:var(--red)}.subtitle{font-size:12px;color:var(--muted)}button{border:1px solid var(--line);background:linear-gradient(180deg,#202432,#161a25);color:var(--text);padding:11px 14px;border-radius:13px;font-weight:850;cursor:pointer}button.primary{background:linear-gradient(180deg,#ff625a,var(--red));border-color:var(--red)}button.green{background:rgba(41,216,135,.14);border-color:rgba(41,216,135,.45);color:#7cf0b8}button.ghost{background:transparent}.danger{color:#ff8882}main{padding:15px 15px calc(100px + env(safe-area-inset-bottom))}.tabs{display:flex;gap:8px;margin-bottom:14px;overflow:auto}.tabs button{white-space:nowrap}.tabs .active{background:var(--red);border-color:var(--red)}.section{display:none}.section.active{display:block}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}.card{background:linear-gradient(180deg,rgba(29,33,47,.98),rgba(16,19,28,.98));border:1px solid var(--line);border-radius:20px;padding:16px;box-shadow:var(--shadow)}.kpi{grid-column:span 3}.half{grid-column:span 6}.full{grid-column:1/-1}.kpi .label{font-size:12px;color:var(--muted);font-weight:750}.kpi .value{font-size:27px;font-weight:950;margin-top:8px}h2,h3{margin:0 0 12px}.muted{color:var(--muted)}.tiny{font-size:12px}.good{color:var(--green)}.warn{color:var(--yellow)}.bad{color:#ff7770}.scroll{overflow:auto}table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:10px 8px;border-bottom:1px solid rgba(48,54,70,.75);vertical-align:middle}th{font-size:11px;color:#c6ccda;text-transform:uppercase;letter-spacing:.55px}.badge{display:inline-block;padding:4px 8px;border-radius:999px;font-size:11px;font-weight:900}.buy{background:rgba(85,168,255,.18);color:#a9d1ff}.sell{background:rgba(41,216,135,.16);color:#7cf0b8}.clause{background:rgba(255,75,67,.2);color:#ff9a95}.neutral{background:#ffffff10;color:#d9deea}.form{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}label{display:block;font-size:12px;color:var(--muted);margin:0 0 5px}input,select,textarea{width:100%;border:1px solid var(--line);background:#0b0e16;color:var(--text);padding:11px;border-radius:11px}textarea{min-height:110px;resize:vertical}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.note{padding:12px 13px;border-radius:13px;background:#0d111b;border-left:4px solid var(--red)}.hero{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}.hero strong{font-size:20px}.metric{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px dashed var(--line)}.drop{border:1.5px dashed #555e73;border-radius:17px;padding:22px;text-align:center;background:#0c0f17}.preview{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:12px}.preview img{width:100%;border-radius:12px;border:1px solid var(--line)}.statusbar{padding:10px 12px;border-radius:12px;background:#0c111a;margin-top:10px}.sync-code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:11px}.subtabs{display:flex;gap:8px;margin:0 0 14px}.subtabs button.active{background:var(--red);border-color:var(--red)}.subview{display:none}.subview.active{display:block}.pitch{position:relative;min-height:620px;background:linear-gradient(180deg,#071018,#08121b);border:3px solid #32394b;border-radius:8px;padding:22px;overflow:hidden}.pitch:before{content:"";position:absolute;inset:4%;border:2px solid #32394b;background:linear-gradient(90deg,transparent 49.7%,#32394b 49.7%,#32394b 50.3%,transparent 50.3%);pointer-events:none}.pitch-grid{position:relative;z-index:2;display:grid;grid-template-rows:repeat(4,1fr);min-height:570px;gap:16px}.lineup-row{display:flex;justify-content:space-around;align-items:center;gap:10px}.player-chip{width:120px;min-height:86px;background:#232736;border:1px solid #3a4051;border-radius:8px;padding:8px;text-align:center}.player-chip b{display:block;font-size:13px}.player-chip small{color:var(--muted)}.pos{display:inline-block;padding:2px 6px;font-size:10px;font-weight:900;border-radius:4px;background:var(--blue)}.pos.DEF{background:#b425c7}.pos.CEN{background:#159fe5}.pos.DEL{background:#f45b4e}.pos.POR{background:#39b979}.squad-card{display:grid;grid-template-columns:70px 1fr auto;gap:12px;align-items:center;background:#222634;border:1px solid #333949;padding:12px;margin-bottom:10px}.avatar{height:70px;border-radius:8px;background:#343949;display:grid;place-items:center;font-size:28px}.score{font-size:28px;font-weight:950}.mobile-nav{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(7,9,16,.98);border-top:1px solid var(--line);padding:8px 8px calc(8px + env(safe-area-inset-bottom));grid-template-columns:repeat(7,1fr);gap:3px}.mobile-nav button{padding:8px 2px;font-size:9px}
+@media(max-width:1000px){.kpi{grid-column:span 6}.half{grid-column:1/-1}.form{grid-template-columns:repeat(3,1fr)}}@media(max-width:720px){.tabs{display:none}.mobile-nav{display:grid}.subtitle{display:none}main{padding:12px 12px calc(105px + env(safe-area-inset-bottom))}.kpi,.half,.full{grid-column:1/-1}.form{grid-template-columns:1fr 1fr}.card{border-radius:16px;padding:13px}.brand{font-size:17px}th,td{font-size:12px;padding:8px 6px}.player-chip{width:82px;min-height:76px;padding:5px}.pitch{min-height:530px;padding:10px}.pitch-grid{min-height:500px}.squad-card{grid-template-columns:58px 1fr auto}.avatar{height:58px}}
+
+.manager-view{display:flex;align-items:center;gap:8px;min-width:260px}.manager-view label{margin:0;white-space:nowrap}
+.manager-view select{padding:9px}.drag-handle{cursor:grab;font-size:20px;user-select:none}.dragging{opacity:.38}
+.row-actions{display:flex;gap:5px;white-space:nowrap}.row-actions button{padding:7px 9px}
+.sync-ok{border-left-color:var(--green)}.sync-warn{border-left-color:var(--yellow)}
+.owner-pill{padding:3px 7px;border-radius:999px;background:#ffffff10;font-size:11px}
+@media(max-width:720px){.top{align-items:flex-start;flex-wrap:wrap}.manager-view{width:100%;min-width:0}.manager-view label{display:none}.row-actions button{padding:6px 8px}.drag-handle{font-size:17px}}
+</style></head><body>
+<header><div class="wrap top"><div><div class="brand">MASTER <b>FANTASY PRO V6 FINAL</b></div><div class="subtitle">Centro de mando · LALIGAMETODOS LEAGUE</div></div><div class="manager-view"><label>Vista como</label><select id="activeManager" onchange="changeActiveManager(this.value)"></select></div>
+<button id="installBtn" onclick="installApp()">Instalar app</button></div></header>
+<main class="wrap"><nav class="tabs"><button class="active" data-tab="inicio">Inicio</button><button data-tab="actividad">Actividad</button><button data-tab="mercado">Mercado</button><button data-tab="liga">Liga</button><button data-tab="clasificacion">Clasificación</button><button data-tab="equipo">Equipo</button><button data-tab="capturas">Capturas</button><button data-tab="sincronizar">Sincronizar</button></nav>
+<section id="inicio" class="section active"><div class="grid"><div class="card kpi"><div class="label">💰 Saldo contable</div><div class="value" id="kSaldo"></div></div><div class="card kpi"><div class="label">🔒 Dinero en pujas</div><div class="value" id="kPujas"></div></div><div class="card kpi"><div class="label">💳 Saldo si ganamos pujas</div><div class="value" id="kSaldoReal"></div></div><div class="card kpi"><div class="label">📦 Valor plantilla</div><div class="value" id="kPlantilla"></div></div><div class="card half"><h3>💰 Dinero estimado</h3><div class="scroll"><table><thead><tr><th>#</th><th>Manager</th><th>Saldo</th><th>Capacidad</th></tr></thead><tbody id="rankSaldo"></tbody></table></div></div><div class="card half"><h3>📈 Valor de plantilla</h3><div class="scroll"><table><thead><tr><th>#</th><th>Manager</th><th>Valor</th><th>Actualizado</th></tr></thead><tbody id="rankValor"></tbody></table></div></div><div class="card full"><div class="hero"><div><strong>Sincronización de datos</strong><div class="muted tiny">Qué se recalcula automáticamente y qué necesita una captura diaria</div></div></div><div id="syncHealth"></div></div><div class="card full"><div class="hero"><div><strong>¿Estamos preparados para puntuar?</strong><div class="muted tiny">Se actualiza con Actividad, Mercado y Equipo</div></div></div><div id="insights"></div></div></div></section>
+<section id="actividad" class="section"><div class="card"><div class="hero"><div><h2>Actividad de la liga</h2><div class="muted tiny">Arrastra las filas o usa ↑ ↓ para replicar exactamente el orden oficial</div></div><button onclick="setCaptureType('actividad')" class="primary">Añadir captura</button></div><div class="scroll"><table><thead><tr><th>Orden</th><th>Fecha</th><th>Tipo</th><th>Manager</th><th>Jugador</th><th>Rival / LALIGA</th><th>Importe</th><th>Acciones</th></tr></thead><tbody id="movTable"></tbody></table></div></div></section>
+<section id="mercado" class="section"><div class="grid"><div class="card full"><div class="hero"><div><h2>Mercado y pujas activas</h2><div class="muted tiny">El dinero movilizado se descuenta del saldo disponible para el control MASTER</div></div><button onclick="setCaptureType('mercado')" class="primary">Leer captura de Mercado</button></div><div class="scroll"><table><thead><tr><th>Pos.</th><th>Jugador</th><th>Estado</th><th>Valor</th><th>Precio</th><th>Nº pujas</th><th>Puja de la vista activa</th><th></th></tr></thead><tbody id="marketTable"></tbody></table></div></div><div class="card full"><h3>Añadir o corregir puja</h3><div class="form"><div><label>Posición</label><select id="mPos"><option>POR</option><option>DEF</option><option selected>CEN</option><option>DEL</option></select></div><div><label>Jugador</label><input id="mPlayer"></div><div><label>Estado</label><input id="mStatus" placeholder="Alineable / Lesionado"></div><div><label>Valor de mercado</label><input id="mValue" type="number"></div><div><label>Precio de salida</label><input id="mPrice" type="number"></div><div><label>Nº de pujas</label><input id="mBids" type="number"></div><div><label>Puja del manager activo (€)</label><input id="mOurBid" type="number"></div></div><div class="actions"><button class="primary" onclick="addMarket()">Guardar en Mercado</button></div></div></div></section>
+<section id="liga" class="section"><div class="grid"><div class="card full"><h2>Situación económica de toda la liga</h2><div class="scroll"><table><thead><tr><th>Manager</th><th>Saldo contable</th><th>Pujas activas</th><th>Saldo si gana</th><th>Valor actual</th><th>Actualizado</th><th>Deuda permitida</th><th>Puede pujar hasta</th></tr></thead><tbody id="managerTable"></tbody></table></div></div><div class="card full"><h2>Actualización diaria de valores</h2><div class="scroll"><table><thead><tr><th>Manager</th><th>Valor de hoy</th><th>Fecha</th></tr></thead><tbody id="dailyValues"></tbody></table></div><div class="actions"><button class="primary" onclick="saveDailyValues()">Guardar valores de hoy</button></div></div><div class="card full"><h3>Ajuste manual de saldo</h3><div class="form"><div><label>Manager</label><select id="uManager"></select></div><div><label>Ajuste (+ / -)</label><input id="uAjuste" type="number"></div></div><div class="actions"><button class="primary" onclick="updateManager()">Guardar ajuste</button></div></div></div></section>
+<section id="clasificacion" class="section"><div class="grid"><div class="card full"><div class="hero"><div><h2>Clasificación</h2><div class="muted tiny">Total y jornadas importadas mediante captura</div></div><button onclick="setCaptureType('clasificacion')" class="primary">Leer captura</button></div><div class="form"><div><label>Vista</label><select id="standingView" onchange="renderStandings()"></select></div></div><div class="scroll"><table><thead><tr><th>#</th><th>Manager</th><th>PFSY</th></tr></thead><tbody id="standingTable"></tbody></table></div></div><div class="card full"><h3>Edición rápida</h3><div class="form"><div><label>Jornada (0 = TOTAL)</label><input id="sRound" type="number" min="0" max="38" value="0"></div><div><label>Manager</label><select id="sManager"></select></div><div><label>Puntos PFSY</label><input id="sPoints" type="number"></div></div><div class="actions"><button class="primary" onclick="saveStandingRow()">Guardar puntos</button></div></div></div></section>
+<section id="equipo" class="section"><div class="card"><div class="subtabs"><button class="active" data-sub="alineacion">Alineación</button><button data-sub="plantilla">Plantilla</button><button data-sub="puntos">Puntos</button></div><div id="alineacion" class="subview active"><div class="hero"><div><h2>Alineación</h2><div class="muted tiny" id="lineupSummary"></div></div><button onclick="setCaptureType('equipo')" class="primary">Leer captura de Equipo</button></div><div class="form"><div><label>Esquema</label><select id="formationSelect" onchange="changeFormation(this.value)"><option>3-4-3</option><option>3-5-2</option><option>4-3-3</option><option>4-4-2</option><option>4-5-1</option><option>5-3-2</option><option>5-4-1</option></select></div></div><div class="note" id="formationWarning">Selecciona el esquema y usa Alinear/Quitar en Plantilla. Puedes editar cualquier jugador manualmente.</div><div class="pitch"><div class="pitch-grid" id="pitchLineup"></div></div></div><div id="plantilla" class="subview"><div class="hero"><div><h2>Plantilla</h2><div class="muted tiny" id="squadSummary"></div></div><button onclick="addSquadPlayerPrompt()">Añadir jugador</button></div><div id="squadList"></div></div><div id="puntos" class="subview"><div class="form"><div><label>Jornada</label><select id="teamPointsRound" onchange="renderTeamPoints()"></select></div></div><div class="pitch"><div class="pitch-grid" id="pitchPoints"></div></div></div></div></section>
+<section id="capturas" class="section"><div class="grid"><div class="card full"><h2>📸 Importar captura</h2><div class="form"><div><label>Tipo de captura</label><select id="captureType"><option value="actividad">Actividad</option><option value="mercado">Mercado</option><option value="clasificacion">Clasificación</option><option value="equipo">Equipo</option></select></div></div><p class="muted">Actividad está adaptada al formato real. Mercado, Clasificación y Equipo muestran una revisión editable antes de guardar.</p><div class="drop" id="dropZone"><input id="shots" type="file" accept="image/png,image/jpeg,image/webp" multiple><div style="font-weight:900;margin-top:8px">Selecciona, arrastra o pega capturas</div></div><div class="preview" id="preview"></div><div class="actions"><button class="primary" onclick="runOCR()">Leer capturas</button><button onclick="pasteScreenshot()">Pegar captura</button><button onclick="clearOCR()">Limpiar</button></div><div id="ocrStatus" class="statusbar muted">Esperando capturas.</div><details style="margin-top:12px"><summary>Texto leído por OCR</summary><textarea id="ocrRaw" class="sync-code" readonly></textarea></details></div><div class="card full"><h2>Revisión antes de guardar</h2><div id="reviewArea"></div><div class="actions"><button class="primary" onclick="saveReviewed()">Confirmar y actualizar app</button><button onclick="addReviewRow()">Añadir fila manual</button></div></div></div></section>
+<section id="sincronizar" class="section"><div class="grid"><div class="card half"><h2>Exportar copia</h2><button class="primary" onclick="exportJSON()">Descargar copia MASTER</button><div class="actions"><button onclick="exportAudit()">Exportar auditoría económica</button></div></div><div class="card half"><h2>Importar copia</h2><input id="importFile" type="file" accept=".json,application/json"><div class="actions"><button class="green" onclick="importJSON()">Importar</button></div></div><div class="card full"><h2>Estado manual para la jornada</h2><div class="form"><div><label>Porteros titulares disponibles</label><input id="pGoalkeepers" type="number" min="0"></div><div><label>Jugadores válidos</label><input id="pStarters" type="number" min="0"></div><div><label>Alineación guardada</label><select id="pLineup"><option value="false">No</option><option value="true">Sí</option></select></div></div><div class="actions"><button class="primary" onclick="savePreparation()">Guardar estado</button></div></div></div></section>
+</main><nav class="mobile-nav"><button class="active" data-tab="inicio">Inicio</button><button data-tab="actividad">Actividad</button><button data-tab="mercado">Mercado</button><button data-tab="liga">Liga</button><button data-tab="clasificacion">Clasif.</button><button data-tab="equipo">Equipo</button><button data-tab="capturas">Capturas</button></nav>
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script><script>
+const KEY="masterFantasyProV4";
+const MANAGERS=["Ramon.CR85","Watered","Atotxa2022","kvalentinov","Hello Moto","J Cabrejo","Jonpetito","ClipperX55","kikeman1"];
+const INITIAL={managers:MANAGERS.map((name,i)=>({name,base:name==="Ramon.CR85"?102115951:100000000,value:[109080573,229565319,157035081,138624852,138007806,134562251,129607455,128802687,125000000][i],adjust:0,valueDate:name==="Ramon.CR85"?"2026-07-31":""})),movements:[],market:[],standings:{"0":{}},squad:[{name:"Zubeldia",pos:"DEF",value:10373360,starter:true},{name:"Kike Salas",pos:"DEF",value:12285277,starter:true},{name:"A. Abqar",pos:"DEF",value:4921592,starter:true},{name:"De Galarreta",pos:"CEN",value:10313956,starter:true},{name:"Camavinga",pos:"CEN",value:0,starter:true},{name:"Ilaix Moriba",pos:"CEN",value:0,starter:true},{name:"Pepelu",pos:"CEN",value:0,starter:true},{name:"Lucas Boyé",pos:"DEL",value:0,starter:true},{name:"Ferran Jutglà",pos:"DEL",value:0,starter:true},{name:"Hugo Duro",pos:"DEL",value:0,starter:true}],teamPoints:{},preparation:{goalkeepers:0,starters:10,lineupSaved:true},formation:"3-4-3"};
+let data=JSON.parse(localStorage.getItem(KEY)||"null")||structuredClone(INITIAL),review=[],selectedFiles=[],deferredPrompt=null;
+function migrate(){data.managers=data.managers||INITIAL.managers;data.movements=data.movements||[];data.market=data.market||[];data.standings=data.standings||{"0":{}};data.squad=data.squad||INITIAL.squad;data.teamPoints=data.teamPoints||{};data.preparation=data.preparation||INITIAL.preparation;data.formation=data.formation||'3-4-3';for(const m of data.managers){if(!('valueDate'in m))m.valueDate='';delete m.notes}}migrate();
+const $=id=>document.getElementById(id);function money(n){return new Intl.NumberFormat('es-ES',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(Number(n)||0)}function today(){return new Date().toISOString().slice(0,10)}function formatDate(d){if(!d)return'';const m=String(d).match(/^(\d{4})-(\d{2})-(\d{2})$/);return m?`${m[3]}/${m[2]}/${m[1]}`:d}function dateValue(d){return new Date(d||'1970-01-01').getTime()||0}
+function balance(m){let b=Number(m.base||0)+Number(m.adjust||0);for(const x of data.movements.filter(x=>x.manager===m.name))b+=x.type==='Venta'?Number(x.amount):-Number(x.amount);return b}function mobilized(){return data.market.reduce((s,x)=>s+Number(x.ourBid||0),0)}function capacity(m){return balance(m)+Number(m.value||0)*.2}function save(){localStorage.setItem(KEY,JSON.stringify(data));render()}
+function openTab(id){document.querySelectorAll('.section').forEach(x=>x.classList.toggle('active',x.id===id));document.querySelectorAll('[data-tab]').forEach(x=>x.classList.toggle('active',x.dataset.tab===id));scrollTo(0,0)}document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>openTab(b.dataset.tab));document.querySelectorAll('[data-sub]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-sub]').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.subview').forEach(x=>x.classList.toggle('active',x.id===b.dataset.sub))});window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e});function installApp(){if(deferredPrompt){deferredPrompt.prompt();deferredPrompt=null}else alert('iPhone: Compartir → Añadir a pantalla de inicio. Chrome: menú → Instalar aplicación.')}
+function typeBadge(t){return `<span class="badge ${t==='Venta'?'sell':t==='Clausulazo'?'clause':'buy'}">${t}</span>`}function freshLabel(d){if(!d)return'<span class="badge clause">Sin actualizar</span>';const n=Math.floor((new Date(today())-new Date(d))/86400000);return n<=0?'<span class="badge sell">Hoy</span>':n===1?'<span class="badge neutral">Ayer</span>':`<span class="badge clause">Hace ${n} días</span>`}
+function render(){migrate();const ms=data.managers.map(m=>({...m,saldo:balance(m),cap:capacity(m)})),me=ms.find(m=>m.name==='Ramon.CR85')||ms[0],locked=mobilized(),real=me.saldo-locked;$('kSaldo').textContent=money(me.saldo);$('kPujas').textContent=money(locked);$('kSaldoReal').textContent=money(real);$('kSaldoReal').className='value '+(real>=0?'good':'bad');$('kPlantilla').textContent=money(me.value);$('rankSaldo').innerHTML=[...ms].sort((a,b)=>b.saldo-a.saldo).map((m,i)=>`<tr><td>${i+1}</td><td>${m.name}</td><td>${money(m.saldo)}</td><td>${money(m.cap)}</td></tr>`).join('');$('rankValor').innerHTML=[...ms].sort((a,b)=>b.value-a.value).map((m,i)=>`<tr><td>${i+1}</td><td>${m.name}</td><td>${money(m.value)}</td><td>${freshLabel(m.valueDate)}</td></tr>`).join('');$('managerTable').innerHTML=ms.map(m=>`<tr><td><b>${m.name}</b></td><td class="${m.saldo<0?'bad':'good'}">${money(m.saldo)}</td><td>${money(m.value)}</td><td>${freshLabel(m.valueDate)}</td><td>${money(m.value*.2)}</td><td><b>${money(m.cap)}</b></td></tr>`).join('');$('dailyValues').innerHTML=data.managers.map((m,i)=>`<tr><td><b>${m.name}</b></td><td><input id="dailyValue_${i}" type="number" value="${m.value||0}"></td><td><input id="dailyDate_${i}" type="date" value="${m.valueDate||today()}"></td></tr>`).join('');const sorted=[...data.movements].sort((a,b)=>dateValue(b.date)-dateValue(a.date)||(b.createdAt||0)-(a.createdAt||0));$('movTable').innerHTML=sorted.map(x=>`<tr><td>${formatDate(x.date)}</td><td>${typeBadge(x.type)}</td><td>${x.manager}</td><td><b>${x.player}</b></td><td>${x.origin||'LALIGA'}</td><td>${money(x.amount)}</td><td><button class="ghost danger" onclick="removeMovement('${x.id||''}')">×</button></td></tr>`).join('');renderMarket();renderInsights(me,real,locked);renderStandings();renderSquad();fillSelects();$('pGoalkeepers').value=data.preparation.goalkeepers||0;$('pStarters').value=data.preparation.starters||0;$('pLineup').value=String(!!data.preparation.lineupSaved)}
+function renderInsights(me,real,locked){const prep=data.preparation||{},moneyOK=real>=0,keeperOK=Number(prep.goalkeepers)>=1,startersOK=Number(prep.starters)>=11,lineupOK=prep.lineupSaved===true,ready=moneyOK&&keeperOK&&startersOK&&lineupOK;$('insights').innerHTML=`<div class="metric"><span>Resultado</span><b class="${ready?'good':'bad'}">${ready?'✅ SÍ, podemos puntuar':'❌ Aún no podemos asegurar puntos'}</b></div><div class="metric"><span>1. Saldo después de pujas</span><b class="${moneyOK?'good':'bad'}">${money(real)}</b></div><div class="metric"><span>Dinero movilizado en pujas</span><b class="warn">${money(locked)}</b></div><div class="metric"><span>2. Portero titular</span><b class="${keeperOK?'good':'bad'}">${keeperOK?'✅ '+prep.goalkeepers:'❌ Ninguno'}</b></div><div class="metric"><span>3. Jugadores válidos</span><b class="${startersOK?'good':'bad'}">${prep.starters||0} / 11</b></div><div class="metric"><span>4. Alineación guardada</span><b class="${lineupOK?'good':'bad'}">${lineupOK?'✅ Sí':'❌ No'}</b></div><div class="note" style="margin-top:12px">El saldo contable es ${money(me.saldo)}. Para el control conservador MASTER se descuentan todas las pujas activas.</div>`}
+function fillSelects(){['uManager','sManager'].forEach(id=>{const el=$(id),v=el.value;el.innerHTML=data.managers.map(m=>`<option>${m.name}</option>`).join('');if(v)el.value=v})}function saveDailyValues(){data.managers.forEach((m,i)=>{const v=Number($(`dailyValue_${i}`).value),d=$(`dailyDate_${i}`).value||today();if(v>0){m.value=v;m.valueDate=d}});save();alert('Valores actualizados.')}function updateManager(){const m=data.managers.find(x=>x.name===$('uManager').value);if(m)m.adjust+=Number($('uAjuste').value)||0;save()}function savePreparation(){data.preparation={goalkeepers:Number($('pGoalkeepers').value)||0,starters:Number($('pStarters').value)||0,lineupSaved:$('pLineup').value==='true'};save()}
+function removeMovement(id){const i=data.movements.findIndex(x=>x.id===id);if(i>=0&&confirm('¿Eliminar esta operación?')){data.movements.splice(i,1);save()}}function addMarket(){const x={id:crypto.randomUUID?.()||String(Date.now()),pos:$('mPos').value,player:$('mPlayer').value.trim(),status:$('mStatus').value.trim(),value:Number($('mValue').value),price:Number($('mPrice').value),bids:Number($('mBids').value),ourBid:Number($('mOurBid').value)};if(!x.player)return alert('Falta el jugador.');const i=data.market.findIndex(y=>y.player.toLowerCase()===x.player.toLowerCase());if(i>=0)data.market[i]={...data.market[i],...x};else data.market.push(x);save()}function removeMarket(id){data.market=data.market.filter(x=>x.id!==id);save()}function renderMarket(){$('marketTable').innerHTML=data.market.map(x=>`<tr><td><span class="pos ${x.pos||'CEN'}">${x.pos||'—'}</span></td><td><b>${x.player}</b></td><td>${x.status||'—'}</td><td>${money(x.value)}</td><td><b>${money(x.price||0)}</b></td><td>${x.bids||0}</td><td class="${x.ourBid?'warn':''}">${x.ourBid?money(x.ourBid):'<span class="muted">No indicada</span>'}</td><td><button class="ghost danger" onclick="removeMarket('${x.id}')">×</button></td></tr>`).join('')}
+function saveStandingRow(){const r=String(Number($('sRound').value)||0);data.standings[r]=data.standings[r]||{};data.standings[r][$('sManager').value]=Number($('sPoints').value)||0;save()}function renderStandings(){const rounds=Object.keys(data.standings).map(Number).sort((a,b)=>b-a),sel=$('standingView'),cur=sel.value;sel.innerHTML='<option value="0">TOTAL</option>'+rounds.filter(x=>x>0).map(x=>`<option value="${x}">Jornada ${x}</option>`).join('');if(cur&&[...sel.options].some(o=>o.value===cur))sel.value=cur;const r=sel.value||'0',rows=data.managers.map(m=>({name:m.name,pts:Number(data.standings[r]?.[m.name]||0)})).sort((a,b)=>b.pts-a.pts);$('standingTable').innerHTML=rows.map((x,i)=>`<tr><td>${i+1}</td><td><b>${x.name}</b></td><td class="score">${x.pts}</td></tr>`).join('')}
+function formationNeeds(){const [d,c,a]=(data.formation||'3-4-3').split('-').map(Number);return{POR:1,DEF:d,CEN:c,DEL:a}}function changeFormation(v){data.formation=v;save()}function editSquadPlayer(i){const p=data.squad[i];const name=prompt('Nombre del jugador',p.name);if(!name)return;const pos=(prompt('Posición: POR, DEF, CEN o DEL',p.pos)||p.pos).toUpperCase();const value=Number(prompt('Valor de mercado',p.value)||p.value);data.squad[i]={...p,name,pos,value};save()}function playerHTML(p,pointsMode=false,round=''){const pts=pointsMode?Number(data.teamPoints[round]?.[p.name]||0):'';return `<div class="player-chip"><span class="pos ${p.pos}">${p.pos}</span><b>${p.name}</b><small>${pointsMode?pts+' PFSY':money(p.value)}</small></div>`}function renderPitch(id,pointsMode=false,round=''){const starters=data.squad.filter(x=>x.starter),groups={POR:[],DEF:[],CEN:[],DEL:[]},needs=formationNeeds();starters.forEach(p=>(groups[p.pos]||groups.CEN).push(p));$(id).innerHTML=['POR','DEF','CEN','DEL'].map(pos=>{const cards=groups[pos].map(p=>playerHTML(p,pointsMode,round));while(cards.length<(needs[pos]||0))cards.push(`<div class="player-chip"><b>Vacante ${pos}</b></div>`);return `<div class="lineup-row">${cards.join('')}</div>`}).join('')}function renderSquad(){renderPitch('pitchLineup');const needs=formationNeeds(),counts={POR:0,DEF:0,CEN:0,DEL:0};data.squad.filter(x=>x.starter).forEach(x=>counts[x.pos]=(counts[x.pos]||0)+1);const valid=Object.keys(needs).every(k=>counts[k]===needs[k]);$('formationSelect').value=data.formation||'3-4-3';$('formationWarning').innerHTML=valid?'✅ Alineación compatible con el esquema.':`⚠️ El esquema ${data.formation} necesita 1 POR, ${needs.DEF} DEF, ${needs.CEN} CEN y ${needs.DEL} DEL.`;$('lineupSummary').textContent=`${data.squad.filter(x=>x.starter).length}/11 titulares · Esquema ${data.formation} · Valor ${money(data.managers.find(x=>x.name==='Ramon.CR85')?.value)}`;$('squadSummary').textContent=`${data.squad.length}/24 fichas`;$('squadList').innerHTML=data.squad.map((p,i)=>`<div class="squad-card"><div class="avatar">👤</div><div><span class="pos ${p.pos}">${p.pos}</span> <b>${p.name}</b><div class="muted">${money(p.value)} · ${p.starter?'Alineado':'Suplente'}</div></div><div class="actions"><button onclick="editSquadPlayer(${i})">Editar</button><button onclick="toggleStarter(${i})">${p.starter?'Quitar':'Alinear'}</button></div></div>`).join('');const rounds=Object.keys(data.teamPoints).map(Number).sort((a,b)=>b-a),s=$('teamPointsRound'),cur=s.value;s.innerHTML=rounds.length?rounds.map(r=>`<option value="${r}">Jornada ${r}</option>`).join(''):'<option value="">Sin jornadas</option>';if(cur)s.value=cur;renderTeamPoints()}function toggleStarter(i){if(!data.squad[i].starter&&data.squad.filter(x=>x.starter).length>=11)return alert('Ya hay 11 titulares. Quita uno antes de alinear otro.');data.squad[i].starter=!data.squad[i].starter;data.preparation.starters=data.squad.filter(x=>x.starter).length;data.preparation.goalkeepers=data.squad.filter(x=>x.starter&&x.pos==='POR').length;save()}function addSquadPlayerPrompt(){const name=prompt('Nombre del jugador');if(!name)return;const pos=(prompt('Posición: POR, DEF, CEN o DEL','CEN')||'CEN').toUpperCase();data.squad.push({name,pos,value:0,starter:false});save()}function renderTeamPoints(){const r=$('teamPointsRound').value;if(r)renderPitch('pitchPoints',true,r);else $('pitchPoints').innerHTML='<div class="note">Importa o añade una jornada para ver sus puntos.</div>'}
+function exportJSON(){const b=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=`MASTER_FANTASY_${today()}.json`;a.click()}function importJSON(){const f=$('importFile').files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{data=JSON.parse(r.result);migrate();save()}catch(e){alert('Copia no válida')}};r.readAsText(f)}
+function setCaptureType(t){$('captureType').value=t;openTab('capturas')}function renderPreviews(){$('preview').innerHTML=selectedFiles.map(f=>`<img src="${URL.createObjectURL(f)}">`).join('')}$('shots').addEventListener('change',()=>{selectedFiles=[...$('shots').files];renderPreviews()});const dz=$('dropZone');['dragenter','dragover'].forEach(ev=>dz.addEventListener(ev,e=>e.preventDefault()));dz.addEventListener('drop',e=>{e.preventDefault();selectedFiles=[...e.dataTransfer.files].filter(f=>f.type.startsWith('image/'));renderPreviews()});document.addEventListener('paste',e=>{const a=[...e.clipboardData.items].filter(x=>x.type.startsWith('image/')).map(x=>x.getAsFile()).filter(Boolean);if(a.length){selectedFiles.push(...a);renderPreviews()}});async function pasteScreenshot(){try{const items=await navigator.clipboard.read();for(const it of items)for(const t of it.types)if(t.startsWith('image/'))selectedFiles.push(await it.getType(t));renderPreviews()}catch(e){alert('Usa Ctrl+V para pegar la captura.')}}function clearOCR(){selectedFiles=[];review=[];$('shots').value='';$('preview').innerHTML='';$('ocrRaw').value='';renderReview()}
+async function makeCanvas(file,mode='original'){const img=await createImageBitmap(file),c=document.createElement('canvas'),scale=Math.max(1.5,Math.min(3,2400/img.width));c.width=img.width*scale;c.height=img.height*scale;const x=c.getContext('2d',{willReadFrequently:true});x.drawImage(img,0,0,c.width,c.height);if(mode!=='original'){const d=x.getImageData(0,0,c.width,c.height);for(let i=0;i<d.data.length;i+=4){let y=.299*d.data[i]+.587*d.data[i+1]+.114*d.data[i+2];if(mode==='gray')y=Math.max(0,Math.min(255,(y-118)*1.65+138));else y=255-Math.max(0,Math.min(255,(y-105)*1.45+135));d.data[i]=d.data[i+1]=d.data[i+2]=y}x.putImageData(d,0,0)}return c}async function recognize(c,label,i,n){const r=await Tesseract.recognize(c,'spa+eng',{logger:m=>{if(m.status==='recognizing text')$('ocrStatus').textContent=`${label} ${i+1}/${n}: ${Math.round(m.progress*100)}%`}});return r.data.text||''}function norm(t){return(t||'').replace(/\r/g,'\n').replace(/[€]/g,'').replace(/\s+/g,' ').replace(/LAL[l1]GA/gi,'LALIGA')}function amount(s){return Number((s||'').replace(/\D/g,''))||0}function managerFrom(s){const l=s.toLowerCase();return data.managers.find(m=>l.includes(m.name.toLowerCase()))?.name||'Ramon.CR85'}function iso(raw){const m=(raw||'').match(/(\d{1,2})[/.\-](\d{1,2})[/.\-](\d{4})/);return m?`${m[3]}-${String(m[2]).padStart(2,'0')}-${String(m[1]).padStart(2,'0')}`:today()}
+function parseActivity(text){const f=norm(text),names=data.managers.map(m=>m.name.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).sort((a,b)=>b.length-a.length).join('|'),rx=new RegExp(`(${names})\\s+ha\\s+(comprado|vendido|fichado|clausulado|clausurado)\\s+al?\\s+jugador\\s+(.+?)\\s+(?:de|a)\\s+LALIGA\\s+por\\s+((?:\\d{1,3}[.\\s]){1,3}\\d{3}|\\d{4,9})`,'gi'),out=[];let m;while((m=rx.exec(f))){const pre=f.slice(Math.max(0,m.index-120),m.index),verb=m[2].toLowerCase();out.push({kind:'activity',keep:true,date:iso((pre.match(/\d{1,2}[/.\-]\d{1,2}[/.\-]\d{4}/g)||[]).pop()||''),type:verb.startsWith('vend')?'Venta':verb.startsWith('claus')?'Clausulazo':'Compra',manager:managerFrom(m[1]),player:m[3].trim(),origin:'LALIGA',amount:amount(m[4])})}return out}
+function parseClassification(text){const f=norm(text),out=[];for(const m of data.managers){const esc=m.name.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),rx=new RegExp(`${esc}\\s+(?:[^0-9]{0,25})?(\\d{1,5})\\s*(?:PFSY)?`,'i'),hit=f.match(rx);if(hit)out.push({kind:'standing',keep:true,round:0,manager:m.name,points:Number(hit[1])})}return out}
+function cleanMarketName(s){return(s||'').replace(/\b(?:PFSY|PFSV|LALIGA|Alineable|Lesionado|Valor|Precio|Fichar|Acciones)\b.*$/i,'').replace(/^[^A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+/,'').replace(/\s+/g,' ').trim()}
+function parseMarket(text){
+ const raw=(text||'').replace(/\r/g,'\n').replace(/LAL[l1]GA/gi,'LALIGA').replace(/[€]/g,'');
+ const flat=raw.replace(/\n+/g,' ').replace(/\s+/g,' '),out=[];
+ const blockRx=/\b(POR|DEF|CEN|DEL)\b\s+(.{2,60}?)(?=\s+(?:PFSY|PFSV|LALIGA|Alineable|Lesionado|Valor)\b)(.*?)(?=\b(?:POR|DEF|CEN|DEL)\b\s+[A-ZÁÉÍÓÚÜÑ]|$)/gi;
+ let m;
+ while((m=blockRx.exec(flat))){
+   const block=m[3],player=cleanMarketName(m[2]);
+   const vm=block.match(/\bValor\s+((?:\d{1,3}[.\s]){1,3}\d{3}|\d{4,9})/i);
+   const pr=block.match(/\bPrecio\s+((?:\d{1,3}[.\s]){1,3}\d{3}|\d{4,9})/i);
+   const pb=block.match(/(\d{1,2})\s+pujas?/i);
+   const status=/Lesionado/i.test(block)?'Lesionado':/Alineable/i.test(block)?'Alineable':'';
+   if(player&&(vm||pr))out.push({kind:'market',keep:true,pos:m[1].toUpperCase(),player,status,value:amount(vm?.[1]||''),price:amount(pr?.[1]||''),bids:Number(pb?.[1]||0),ourBid:0});
+ }
+ if(!out.length){
+   const fallback=/([A-ZÁÉÍÓÚÜÑ][A-Za-zÁÉÍÓÚÜÑáéíóúüñ.' -]{2,35}).{0,90}?\bValor\s+((?:\d{1,3}[.\s]){1,3}\d{3}).{0,50}?\bPrecio\s+((?:\d{1,3}[.\s]){1,3}\d{3})(?:.{0,40}?(\d{1,2})\s+pujas?)?/gi;
+   while((m=fallback.exec(flat))){const player=cleanMarketName(m[1]);if(player)out.push({kind:'market',keep:true,pos:'',player,status:'',value:amount(m[2]),price:amount(m[3]),bids:Number(m[4]||0),ourBid:0})}
+ }
+ const seen=new Set();return out.filter(x=>{const k=x.player.toLowerCase();if(seen.has(k))return false;seen.add(k);return true}).slice(0,30)
+}
+function parseTeam(text){const f=norm(text),out=[];for(const p of data.squad){if(f.toLowerCase().includes(p.name.toLowerCase()))out.push({kind:'team',keep:true,name:p.name,pos:p.pos,value:p.value,starter:true})}return out}
+async function runOCR(){if(!selectedFiles.length)return alert('Selecciona una captura.');review=[];let raws=[];const type=$('captureType').value,parser=type==='actividad'?parseActivity:type==='clasificacion'?parseClassification:type==='mercado'?parseMarket:parseTeam;for(let i=0;i<selectedFiles.length;i++){let texts=[];const c=await makeCanvas(selectedFiles[i]);texts.push(await recognize(c,'Lectura',i,selectedFiles.length));if(!parser(texts.join(' ')).length){const g=await makeCanvas(selectedFiles[i],'gray');texts.push(await recognize(g,'Contraste',i,selectedFiles.length))}const merged=texts.join('\n');raws.push(merged);review.push(...parser(merged))}$('ocrRaw').value=raws.join('\n=====\n');$('ocrStatus').textContent=review.length?`Detectados ${review.length} registros. Revísalos y confirma.`:'No se han estructurado registros. El texto OCR queda visible para añadir filas manuales.';renderReview()}
+function renderReview(){const a=$('reviewArea');if(!review.length){a.innerHTML='<div class="note">Todavía no hay registros para revisar.</div>';return}const k=review[0].kind;if(k==='activity')a.innerHTML=`<div class="scroll"><table><thead><tr><th>Guardar</th><th>Fecha</th><th>Tipo</th><th>Manager</th><th>Jugador</th><th>Importe</th></tr></thead><tbody>${review.map((x,i)=>`<tr><td><input type="checkbox" ${x.keep?'checked':''} onchange="review[${i}].keep=this.checked"></td><td><input type="date" value="${x.date}" onchange="review[${i}].date=this.value"></td><td><select onchange="review[${i}].type=this.value"><option ${x.type==='Compra'?'selected':''}>Compra</option><option ${x.type==='Venta'?'selected':''}>Venta</option><option ${x.type==='Clausulazo'?'selected':''}>Clausulazo</option></select></td><td><select onchange="review[${i}].manager=this.value">${data.managers.map(m=>`<option ${m.name===x.manager?'selected':''}>${m.name}</option>`).join('')}</select></td><td><input value="${x.player}" onchange="review[${i}].player=this.value"></td><td><input type="number" value="${x.amount}" onchange="review[${i}].amount=Number(this.value)"></td></tr>`).join('')}</tbody></table></div>`;else if(k==='market')a.innerHTML=`<div class="note"><b>Nuestra puja:</b> la captura muestra cuántas pujas hay, pero no el importe secreto de la nuestra. Escríbelo manualmente solo donde hayamos pujado.</div><div class="scroll"><table><thead><tr><th>Guardar</th><th>Pos.</th><th>Jugador</th><th>Estado</th><th>Valor</th><th>Precio</th><th>Pujas</th><th>Nuestra puja</th></tr></thead><tbody>${review.map((x,i)=>`<tr><td><input type="checkbox" ${x.keep?'checked':''} onchange="review[${i}].keep=this.checked"></td><td><select onchange="review[${i}].pos=this.value">${['','POR','DEF','CEN','DEL'].map(p=>`<option ${p===x.pos?'selected':''}>${p}</option>`).join('')}</select></td><td><input value="${x.player}" onchange="review[${i}].player=this.value"></td><td><input value="${x.status||''}" onchange="review[${i}].status=this.value"></td><td><input type="number" value="${x.value||0}" onchange="review[${i}].value=Number(this.value)"></td><td><input type="number" value="${x.price||0}" onchange="review[${i}].price=Number(this.value)"></td><td><input type="number" value="${x.bids||0}" onchange="review[${i}].bids=Number(this.value)"></td><td><input type="number" value="${x.ourBid||0}" onchange="review[${i}].ourBid=Number(this.value)"></td></tr>`).join('')}</tbody></table></div>`;else if(k==='standing')a.innerHTML=`<div class="scroll"><table><thead><tr><th>Guardar</th><th>Jornada</th><th>Manager</th><th>Puntos</th></tr></thead><tbody>${review.map((x,i)=>`<tr><td><input type="checkbox" checked onchange="review[${i}].keep=this.checked"></td><td><input type="number" min="0" max="38" value="${x.round}" onchange="review[${i}].round=Number(this.value)"></td><td>${x.manager}</td><td><input type="number" value="${x.points}" onchange="review[${i}].points=Number(this.value)"></td></tr>`).join('')}</tbody></table></div>`;else a.innerHTML=`<div class="scroll"><table><thead><tr><th>Guardar</th><th>Jugador</th><th>Posición</th><th>Valor</th><th>Alineado</th></tr></thead><tbody>${review.map((x,i)=>`<tr><td><input type="checkbox" checked onchange="review[${i}].keep=this.checked"></td><td><input value="${x.name}" onchange="review[${i}].name=this.value"></td><td><select onchange="review[${i}].pos=this.value">${['POR','DEF','CEN','DEL'].map(p=>`<option ${p===x.pos?'selected':''}>${p}</option>`).join('')}</select></td><td><input type="number" value="${x.value}" onchange="review[${i}].value=Number(this.value)"></td><td><input type="checkbox" ${x.starter?'checked':''} onchange="review[${i}].starter=this.checked"></td></tr>`).join('')}</tbody></table></div>`}
+function addReviewRow(){const k=$('captureType').value;if(k==='actividad')review.push({kind:'activity',keep:true,date:today(),type:'Compra',manager:'Ramon.CR85',player:'',origin:'LALIGA',amount:0});else if(k==='mercado')review.push({kind:'market',keep:true,pos:'',player:'',status:'',value:0,price:0,bids:0,ourBid:0});else if(k==='clasificacion')review.push({kind:'standing',keep:true,round:0,manager:'Ramon.CR85',points:0});else review.push({kind:'team',keep:true,name:'',pos:'CEN',value:0,starter:false});renderReview()}
+function saveReviewed(){for(const x of review.filter(x=>x.keep)){if(x.kind==='activity'&&x.player&&x.amount){const key=[x.date,x.type,x.manager,x.player.toLowerCase(),x.amount].join('|'),i=data.movements.findIndex(y=>[y.date,y.type,y.manager,y.player.toLowerCase(),y.amount].join('|')===key);const mv={...x,id:i>=0?data.movements[i].id:(crypto.randomUUID?.()||String(Date.now()+Math.random())),createdAt:Date.now()};delete mv.kind;delete mv.keep;if(i>=0)data.movements[i]=mv;else data.movements.push(mv)}else if(x.kind==='market'&&x.player){const i=data.market.findIndex(y=>y.player.toLowerCase()===x.player.toLowerCase()),v={...x,id:i>=0?data.market[i].id:(crypto.randomUUID?.()||String(Date.now()+Math.random()))};delete v.kind;delete v.keep;if(i>=0)data.market[i]=v;else data.market.push(v)}else if(x.kind==='standing'){const r=String(x.round||0);data.standings[r]=data.standings[r]||{};data.standings[r][x.manager]=Number(x.points)||0}else if(x.kind==='team'&&x.name){const i=data.squad.findIndex(y=>y.name.toLowerCase()===x.name.toLowerCase()),v={name:x.name,pos:x.pos,value:Number(x.value),starter:!!x.starter};if(i>=0)data.squad[i]={...data.squad[i],...v};else data.squad.push(v)}}review=[];save();renderReview();$('ocrStatus').textContent='Datos guardados y paneles actualizados.'}
+
+/* ===== MOTOR UNIFICADO V6 ===== */
+function uid(){return crypto.randomUUID?.()||`${Date.now()}-${Math.random()}`}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function normKey(s){return String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'')}
+function activeName(){return data.settings?.activeManager||'Ramon.CR85'}
+function activeManagerObj(){return data.managers.find(m=>m.name===activeName())||data.managers[0]}
+
+const oldMigrate=migrate;
+migrate=function(){
+ oldMigrate();
+ data.settings=data.settings||{activeManager:'Ramon.CR85'};
+ if(!MANAGERS.includes(data.settings.activeManager))data.settings.activeManager='Ramon.CR85';
+ data.squadsByManager=data.squadsByManager||{};
+ if(!data.squadsByManager['Ramon.CR85'])data.squadsByManager['Ramon.CR85']=data.squad||[];
+ data.formationsByManager=data.formationsByManager||{'Ramon.CR85':data.formation||'3-4-3'};
+ data.preparationByManager=data.preparationByManager||{'Ramon.CR85':data.preparation||{goalkeepers:0,starters:0,lineupSaved:false}};
+ data.ownership=data.ownership||{};
+ data.market=(data.market||[]).map(x=>{
+   x.id=x.id||uid();x.bidsByManager=x.bidsByManager||{};
+   if(Number(x.ourBid||0)&&!x.bidsByManager['Ramon.CR85'])x.bidsByManager['Ramon.CR85']=Number(x.ourBid);
+   delete x.ourBid; return x;
+ });
+ const initialSorted=[...(data.movements||[])].sort((a,b)=>dateValue(b.date)-dateValue(a.date)||(b.createdAt||0)-(a.createdAt||0));
+ initialSorted.forEach((x,i)=>{x.id=x.id||uid();if(!Number.isFinite(Number(x.order)))x.order=i;x.createdAt=x.createdAt||Date.now()-i});
+ data.movements=initialSorted;
+ syncOwnership();
+}
+migrate();
+
+function changeActiveManager(name){
+ data.settings.activeManager=name;
+ data.squad=data.squadsByManager[name]||[];
+ data.formation=data.formationsByManager[name]||'3-4-3';
+ data.preparation=data.preparationByManager[name]||{goalkeepers:0,starters:0,lineupSaved:false};
+ localStorage.setItem(KEY,JSON.stringify(data));render();
+}
+function getSquad(name=activeName()){return data.squadsByManager[name]||(data.squadsByManager[name]=[])}
+function getPrep(name=activeName()){return data.preparationByManager[name]||(data.preparationByManager[name]={goalkeepers:0,starters:0,lineupSaved:false})}
+function getFormation(name=activeName()){return data.formationsByManager[name]||'3-4-3'}
+function bidFor(x,name=activeName()){return Number(x.bidsByManager?.[name]||0)}
+mobilized=function(name=activeName()){return data.market.reduce((s,x)=>s+bidFor(x,name),0)}
+capacity=function(m){return balance(m)-mobilized(m.name)+Number(m.value||0)*.2}
+function syncOwnership(){
+ data.ownership={};
+ [...data.movements].sort((a,b)=>(a.order??999999)-(b.order??999999)).reverse().forEach(x=>{
+   const k=normKey(x.player);
+   if(x.type==='Compra'||x.type==='Clausulazo')data.ownership[k]=x.manager;
+   else if(x.type==='Venta'&&data.ownership[k]===x.manager)delete data.ownership[k];
+ });
+}
+function recalcPreparation(name=activeName()){
+ const sq=getSquad(name),starters=sq.filter(x=>x.starter);
+ const prep=getPrep(name);prep.starters=starters.length;prep.goalkeepers=starters.filter(x=>x.pos==='POR').length;
+ data.preparation=prep;data.squad=sq;data.formation=getFormation(name);
+}
+function save(){
+ recalcPreparation();syncOwnership();
+ data.squadsByManager[activeName()]=data.squad||[];
+ data.formationsByManager[activeName()]=data.formation||'3-4-3';
+ data.preparationByManager[activeName()]=data.preparation||{};
+ localStorage.setItem(KEY,JSON.stringify(data));render();
+}
+
+function movementFingerprint(x){return [x.date,x.type,x.manager,normKey(x.player),Number(x.amount)].join('|')}
+function normalizeOrders(){
+ [...data.movements].sort((a,b)=>(a.order??999999)-(b.order??999999)).forEach((x,i)=>x.order=i);
+}
+function moveMovement(id,delta){
+ const rows=[...data.movements].sort((a,b)=>(a.order??999999)-(b.order??999999));
+ const i=rows.findIndex(x=>x.id===id),j=i+delta;if(i<0||j<0||j>=rows.length)return;
+ [rows[i].order,rows[j].order]=[rows[j].order,rows[i].order];data.movements=rows;normalizeOrders();save();
+}
+function editMovement(id){
+ const x=data.movements.find(y=>y.id===id);if(!x)return;
+ const date=prompt('Fecha AAAA-MM-DD',x.date);if(date===null)return;
+ const type=prompt('Tipo: Compra, Venta o Clausulazo',x.type);if(type===null)return;
+ const manager=prompt('Manager',x.manager);if(manager===null)return;
+ const player=prompt('Jugador',x.player);if(player===null)return;
+ const amountV=prompt('Importe sin puntos',x.amount);if(amountV===null)return;
+ Object.assign(x,{date,type,manager,player,amount:Number(String(amountV).replace(/\D/g,''))||x.amount});save();
+}
+removeMovement=function(id){
+ const x=data.movements.find(y=>y.id===id);if(!x)return alert('No se ha encontrado la fila. Recarga la aplicación.');
+ if(confirm(`Eliminar definitivamente:\n${x.manager} · ${x.type} · ${x.player} · ${money(x.amount)}?`)){
+   data.movements=data.movements.filter(y=>y.id!==id);normalizeOrders();save();
+ }
+}
+let draggedMovementId=null;
+function dragStartMovement(e,id){draggedMovementId=id;e.currentTarget.classList.add('dragging');e.dataTransfer.effectAllowed='move'}
+function dragEndMovement(e){e.currentTarget.classList.remove('dragging');draggedMovementId=null}
+function dropMovement(e,targetId){
+ e.preventDefault();if(!draggedMovementId||draggedMovementId===targetId)return;
+ const rows=[...data.movements].sort((a,b)=>(a.order??999999)-(b.order??999999));
+ const from=rows.findIndex(x=>x.id===draggedMovementId),to=rows.findIndex(x=>x.id===targetId);
+ const [item]=rows.splice(from,1);rows.splice(to,0,item);rows.forEach((x,i)=>x.order=i);data.movements=rows;save();
+}
+
+function renderActivityV6(){
+ const rows=[...data.movements].sort((a,b)=>(a.order??999999)-(b.order??999999));
+ $('movTable').innerHTML=rows.map((x,i)=>`<tr draggable="true" ondragstart="dragStartMovement(event,'${x.id}')" ondragend="dragEndMovement(event)" ondragover="event.preventDefault()" ondrop="dropMovement(event,'${x.id}')">
+ <td class="drag-handle" title="Arrastrar">☰ <span class="muted tiny">${i+1}</span></td><td>${formatDate(x.date)}</td><td>${typeBadge(x.type)}</td>
+ <td>${esc(x.manager)}</td><td><b>${esc(x.player)}</b></td><td>${esc(x.origin||'LALIGA')}</td><td>${money(x.amount)}</td>
+ <td><div class="row-actions"><button class="ghost" onclick="moveMovement('${x.id}',-1)">↑</button><button class="ghost" onclick="moveMovement('${x.id}',1)">↓</button><button class="ghost" onclick="editMovement('${x.id}')">✎</button><button class="ghost danger" onclick="removeMovement('${x.id}')">×</button></div></td></tr>`).join('');
+}
+
+function renderMarket(){
+ const manager=activeName();
+ $('marketTable').innerHTML=data.market.map(x=>`<tr><td><span class="pos ${x.pos||'CEN'}">${esc(x.pos||'—')}</span></td><td><b>${esc(x.player)}</b>${data.ownership[normKey(x.player)]?`<br><span class="owner-pill">${esc(data.ownership[normKey(x.player)])}</span>`:''}</td><td>${esc(x.status||'—')}</td><td>${money(x.value)}</td><td><b>${money(x.price||0)}</b></td><td>${x.bids||0}</td><td><input style="min-width:125px" type="number" value="${bidFor(x,manager)||0}" onchange="setMarketBid('${x.id}',this.value)"></td><td><button class="ghost danger" onclick="removeMarket('${x.id}')">×</button></td></tr>`).join('');
+}
+function setMarketBid(id,value){const x=data.market.find(y=>y.id===id);if(!x)return;x.bidsByManager=x.bidsByManager||{};x.bidsByManager[activeName()]=Number(value)||0;save()}
+addMarket=function(){
+ const player=$('mPlayer').value.trim();if(!player)return alert('Falta el jugador.');
+ let x=data.market.find(y=>normKey(y.player)===normKey(player));
+ if(!x){x={id:uid(),bidsByManager:{}};data.market.push(x)}
+ Object.assign(x,{pos:$('mPos').value,player,status:$('mStatus').value.trim(),value:Number($('mValue').value)||0,price:Number($('mPrice').value)||0,bids:Number($('mBids').value)||0});
+ x.bidsByManager[activeName()]=Number($('mOurBid').value)||0;save();
+}
+
+function renderInsights(me,real,locked){
+ const prep=getPrep(me.name),moneyOK=real>=0,keeperOK=Number(prep.goalkeepers)>=1,startersOK=Number(prep.starters)>=11,lineupOK=prep.lineupSaved===true,ready=moneyOK&&keeperOK&&startersOK&&lineupOK;
+ $('insights').innerHTML=`<div class="metric"><span>Resultado para <b>${esc(me.name)}</b></span><b class="${ready?'good':'bad'}">${ready?'✅ SÍ, puede puntuar':'❌ Aún no puede asegurar puntos'}</b></div>
+ <div class="metric"><span>Saldo contable</span><b>${money(me.saldo)}</b></div><div class="metric"><span>Pujas activas</span><b class="warn">${money(locked)}</b></div>
+ <div class="metric"><span>Saldo si gana todas</span><b class="${moneyOK?'good':'bad'}">${money(real)}</b></div>
+ <div class="metric"><span>Portero alineado</span><b class="${keeperOK?'good':'bad'}">${prep.goalkeepers||0}</b></div>
+ <div class="metric"><span>Jugadores alineados</span><b class="${startersOK?'good':'bad'}">${prep.starters||0}/11</b></div>
+ <div class="metric"><span>Alineación guardada</span><b class="${lineupOK?'good':'bad'}">${lineupOK?'Sí':'No'}</b></div>`;
+}
+function renderSyncHealth(){
+ const stale=data.managers.filter(m=>!m.valueDate||Math.floor((new Date(today())-new Date(m.valueDate))/86400000)>1).length;
+ const bids=data.market.filter(x=>Object.values(x.bidsByManager||{}).some(Number)).length;
+ $('syncHealth').innerHTML=`<div class="metric"><span>Actividad → saldos</span><b class="good">Automático</b></div>
+ <div class="metric"><span>Mercado → pujas y saldo disponible</span><b class="good">Automático (${bids} jugadores con puja)</b></div>
+ <div class="metric"><span>Equipo → once, portero y formación</span><b class="good">Automático por manager</b></div>
+ <div class="metric"><span>Valor real diario de plantillas</span><b class="${stale?'warn':'good'}">${stale?`${stale} managers necesitan actualización`:'Actualizado'}</b></div>
+ <div class="note ${stale?'sync-warn':'sync-ok'}" style="margin-top:10px">El valor diario no puede deducirse de compras y ventas porque el mercado cambia cada día. La app sí recalcula instantáneamente todo lo demás.</div>`;
+}
+
+const oldRender=render;
+render=function(){
+ migrate();
+ const selector=$('activeManager');if(selector){const v=activeName();selector.innerHTML=data.managers.map(m=>`<option ${m.name===v?'selected':''}>${esc(m.name)}</option>`).join('')}
+ data.squad=getSquad();data.formation=getFormation();data.preparation=getPrep();recalcPreparation();
+ const ms=data.managers.map(m=>({...m,saldo:balance(m),locked:mobilized(m.name),real:balance(m)-mobilized(m.name),cap:capacity(m)}));
+ const me=ms.find(m=>m.name===activeName())||ms[0];
+ $('kSaldo').textContent=money(me.saldo);$('kPujas').textContent=money(me.locked);$('kSaldoReal').textContent=money(me.real);$('kSaldoReal').className='value '+(me.real>=0?'good':'bad');$('kPlantilla').textContent=money(me.value);
+ $('rankSaldo').innerHTML=[...ms].sort((a,b)=>b.real-a.real).map((m,i)=>`<tr><td>${i+1}</td><td>${esc(m.name)}</td><td>${money(m.real)}</td><td>${money(m.cap)}</td></tr>`).join('');
+ $('rankValor').innerHTML=[...ms].sort((a,b)=>b.value-a.value).map((m,i)=>`<tr><td>${i+1}</td><td>${esc(m.name)}</td><td>${money(m.value)}</td><td>${freshLabel(m.valueDate)}</td></tr>`).join('');
+ $('managerTable').innerHTML=ms.map(m=>`<tr><td><b>${esc(m.name)}</b></td><td class="${m.saldo<0?'bad':'good'}">${money(m.saldo)}</td><td class="${m.locked?'warn':''}">${money(m.locked)}</td><td class="${m.real<0?'bad':'good'}">${money(m.real)}</td><td>${money(m.value)}</td><td>${freshLabel(m.valueDate)}</td><td>${money(m.value*.2)}</td><td><b>${money(m.cap)}</b></td></tr>`).join('');
+ $('dailyValues').innerHTML=data.managers.map((m,i)=>`<tr><td><b>${esc(m.name)}</b></td><td><input id="dailyValue_${i}" type="number" value="${m.value||0}"></td><td><input id="dailyDate_${i}" type="date" value="${m.valueDate||today()}"></td></tr>`).join('');
+ renderActivityV6();renderMarket();renderInsights(me,me.real,me.locked);renderSyncHealth();renderStandings();renderSquad();fillSelects();
+ if($('pGoalkeepers'))$('pGoalkeepers').value=getPrep().goalkeepers||0;if($('pStarters'))$('pStarters').value=getPrep().starters||0;if($('pLineup'))$('pLineup').value=String(!!getPrep().lineupSaved);
+}
+
+changeFormation=function(v){data.formationsByManager[activeName()]=v;data.formation=v;save()}
+savePreparation=function(){data.preparationByManager[activeName()]={goalkeepers:Number($('pGoalkeepers').value)||0,starters:Number($('pStarters').value)||0,lineupSaved:$('pLineup').value==='true'};data.preparation=data.preparationByManager[activeName()];save()}
+
+/* OCR Actividad: tarjetas independientes, fecha/hora y orden visual */
+function cardDate(card){
+ const d=card.match(/\b(\d{1,2})[\/.\-](\d{1,2})[\/.\-](\d{4})\b/);
+ return d?`${d[3]}-${String(d[2]).padStart(2,'0')}-${String(d[1]).padStart(2,'0')}`:today();
+}
+parseActivity=function(text){
+ const raw=String(text||'').replace(/\r/g,'\n').replace(/LAL[l1I]GA/gi,'LALIGA').replace(/[€]/g,'');
+ const flat=raw.replace(/\n+/g,' ').replace(/\s+/g,' ');
+ const names=data.managers.map(m=>m.name.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).sort((a,b)=>b.length-a.length).join('|');
+ const rx=new RegExp(`(${names})\\s+ha\\s+(comprado|vendido|fichado|clausulado|clausurado)\\s+al?\\s+jugador\\s+(.+?)\\s+(de|a)\\s+LALIGA\\s+por\\s+([\\d.\\s]{4,20})`,'gi');
+ const out=[];let m;
+ while((m=rx.exec(flat))){
+   const before=flat.slice(Math.max(0,m.index-160),m.index),verb=m[2].toLowerCase(),n=amount(m[5]);
+   if(!n)continue;
+   const player=m[3].replace(/\s+/g,' ').trim();
+   const possibleError=n<100000;
+   out.push({kind:'activity',keep:!possibleError,date:cardDate(before),time:(before.match(/\b\d{1,2}:\d{2}\b/g)||[]).pop()||'',type:verb.startsWith('vend')?'Venta':verb.startsWith('claus')?'Clausulazo':'Compra',manager:managerFrom(m[1]),player,origin:'LALIGA',amount:n,warning:possibleError?'Importe sospechosamente bajo':''});
+ }
+ const seen=new Set();return out.filter(x=>{const k=movementFingerprint(x);if(seen.has(k))return false;seen.add(k);return true});
+}
+
+/* OCR Mercado: rechaza etiquetas y exige bloque de posición + Valor + Precio */
+function validMarketPlayer(s){
+ const k=normKey(s);return s&&s.length>=2&&!/^(valor|precio|alineable|lesionado|laliga|pfsy|fichar|acciones|myalineableprecio|alineableprecio)$/i.test(k)&&!/\bvalor\b|\bprecio\b/i.test(s);
+}
+parseMarket=function(text){
+ const raw=String(text||'').replace(/\r/g,'\n').replace(/LAL[l1I]GA/gi,'LALIGA').replace(/[€]/g,'');
+ const flat=raw.replace(/\n+/g,' ').replace(/\s+/g,' ');
+ const starts=[...flat.matchAll(/\b(POR|DEF|CEN|DEL)\b/gi)],out=[];
+ for(let i=0;i<starts.length;i++){
+   const pos=starts[i][1].toUpperCase(),block=flat.slice(starts[i].index,i+1<starts.length?starts[i+1].index:flat.length);
+   const valueM=block.match(/\bValor\s+((?:\d{1,3}[.\s])+\d{3}|\d{4,9})/i),priceM=block.match(/\bPrecio\s+((?:\d{1,3}[.\s])+\d{3}|\d{4,9})/i);
+   if(!valueM&&!priceM)continue;
+   let head=block.replace(/^\s*(POR|DEF|CEN|DEL)\s+/i,'').split(/\b(?:PFSY|PFSV|LALIGA|Alineable|Lesionado|Valor|Precio)\b/i)[0].trim();
+   head=head.replace(/^[^A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+/,'').replace(/\s+/g,' ');
+   if(!validMarketPlayer(head))continue;
+   const status=/Lesionado/i.test(block)?'Lesionado':/Alineable/i.test(block)?'Alineable':'';
+   const pb=block.match(/(\d{1,2})\s+pujas?/i);
+   out.push({kind:'market',keep:true,pos,player:head,status,value:amount(valueM?.[1]||''),price:amount(priceM?.[1]||''),bids:Number(pb?.[1]||0),bidManager:activeName(),ourBid:0});
+ }
+ const seen=new Set();return out.filter(x=>{const k=normKey(x.player);if(seen.has(k))return false;seen.add(k);return true});
+}
+
+const oldRenderReview=renderReview;
+renderReview=function(){
+ oldRenderReview();
+ if(review[0]?.kind==='activity'){
+   const rows=$('reviewArea').querySelectorAll('tbody tr');
+   rows.forEach((tr,i)=>{if(review[i]?.warning){tr.style.outline='2px solid var(--yellow)';tr.title=review[i].warning}})
+ }
+}
+const oldSaveReviewed=saveReviewed;
+saveReviewed=function(){
+ const kind=review[0]?.kind;
+ if(kind==='activity'){
+   const accepted=review.filter(x=>x.keep&&x.player&&x.amount);
+   let added=0,updated=0,skipped=0;
+   for(const x of accepted){
+     const fp=movementFingerprint(x),existing=data.movements.find(y=>movementFingerprint(y)===fp);
+     if(existing){skipped++;continue}
+     const mv={...x,id:uid(),createdAt:Date.now(),order:-1};delete mv.kind;delete mv.keep;delete mv.warning;
+     data.movements.forEach(y=>y.order=Number(y.order||0)+1);data.movements.unshift(mv);added++;
+   }
+   normalizeOrders();review=[];save();renderReview();$('ocrStatus').textContent=`Actividad: ${added} nuevas · ${updated} actualizadas · ${skipped} duplicadas evitadas.`;return;
+ }
+ if(kind==='market'){
+   for(const x of review.filter(x=>x.keep&&x.player)){
+     let v=data.market.find(y=>normKey(y.player)===normKey(x.player));
+     if(!v){v={id:uid(),bidsByManager:{}};data.market.push(v)}
+     Object.assign(v,{pos:x.pos,player:x.player,status:x.status,value:Number(x.value)||0,price:Number(x.price)||0,bids:Number(x.bids)||0});
+     v.bidsByManager=v.bidsByManager||{};v.bidsByManager[activeName()]=Number(x.ourBid)||v.bidsByManager[activeName()]||0;
+   }
+   review=[];save();renderReview();$('ocrStatus').textContent='Mercado actualizado y economía recalculada.';return;
+ }
+ oldSaveReviewed();
+}
+
+function exportAudit(){
+ const report={generatedAt:new Date().toISOString(),activeManager:activeName(),managers:data.managers.map(m=>({manager:m.name,saldoContable:balance(m),pujas:mobilized(m.name),saldoSiGana:balance(m)-mobilized(m.name),valor:m.value,deudaPermitida:m.value*.2,capacidad:capacity(m)})),movements:data.movements,market:data.market};
+ const blob=new Blob([JSON.stringify(report,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`auditoria-master-${today()}.json`;a.click();URL.revokeObjectURL(a.href);
+}
+
+if('serviceWorker'in navigator)navigator.serviceWorker.register('./sw.js').catch(()=>{});renderReview();render();
+</script></body></html>
